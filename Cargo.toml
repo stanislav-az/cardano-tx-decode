@@ -6,6 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rand = "0.7"
 cardano-serialization-lib = "11.1.0"
 cbor_event = "2.2.0"
+hex = "0.4.3"
