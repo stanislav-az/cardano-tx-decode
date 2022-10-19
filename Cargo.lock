@@ -71,6 +71,7 @@ name = "cardano_tx_decode"
 version = "0.1.0"
 dependencies = [
  "cardano-serialization-lib",
+ "cbor_event",
  "rand 0.7.3",
 ]
 
