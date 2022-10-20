@@ -11,6 +11,13 @@ fn main() {
     let tx: Result<Transaction, _> = Deserialize::deserialize(&mut raw);
     match tx {
         Err(err) => println!("FAILED: {}", err),
-        Ok(transaction) => println!("OK!"),
+        Ok(transaction) => {
+            let body = transaction.body();
+            // println!("tx body: {:?}", body);
+            let tx_json = transaction.to_json().expect("json conversion failed");
+            println!("tx json: {}", tx_json);
+            let tx_witness_set = transaction.witness_set();
+            // println!("tx witness: {:?}", tx_witness_set);
+        }
     }
 }
